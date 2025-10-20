@@ -2,19 +2,19 @@
 #define CUSTOMMATRIX_H
 
 #include <iostream>
+#include <array>
 
 using namespace std;
 
 class CustomMatrix{
 public:
-    bool mat[3][3]={0};
+    std::array<std::array<bool,3>,3> mat = {std::array<bool,3>{false,false,false},std::array<bool,3>{false,false,false},std::array<bool,3>{false,false,false}};
     CustomMatrix(){
-
     }
 
     //alternate way to instantiate the class
-    CustomMatrix(bool m[3][3]){
-        const int m_size = sizeof(m) / sizeof(m[0]);
+    CustomMatrix(std::array<std::array<bool,3>,3> m){
+        const int m_size = m.size();
         for (int i=0;i< m_size;i++) {
             for(int j=0; j < sizeof(m[0]);j++){
                 //cout << i << " " << j << endl;
@@ -23,8 +23,8 @@ public:
         }
     }
 
-    void fillMatrix(bool m[3][3]){
-        const int m_size = sizeof(m) / sizeof(m[0]);
+    void fillMatrix(std::array<std::array<bool,3>,3> m){
+        const int m_size = m.size();
         for (int i=0;i< m_size;i++) {
             for(int j=0; j < sizeof(m[0]);j++){
                 //cout << i << " " << j << endl;

@@ -1,0 +1,2 @@
+Based on my thinking, i assume that we gonna scan the screen on 3x3 matrix so i think the optimal and efficient window size for this is in 2+(3xN) while N is depend on what u desire, in this case i use 600x600 window size i hope im correct.
+https://gemini.google.com/share/833e01add672

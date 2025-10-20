@@ -20,7 +20,7 @@ class DrawingCanvas : public QWidget
     Q_OBJECT
 private:
     const int WINDOW_WIDTH=600;
-    const int WINDOW_HEIGHT=400;
+    const int WINDOW_HEIGHT=600;
 
 public:
     explicit DrawingCanvas(QWidget *parent = nullptr);
